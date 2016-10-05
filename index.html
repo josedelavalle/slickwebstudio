@@ -32,8 +32,8 @@
                  //   $('#pic' + wheelItem).toggle("slide");  
                 //});
 
-                $('#pic' + selectedItem).hide();
-                $('#pic' + wheelItem).show();
+                $('#pic' + selectedItem).removeClass('active');
+                $('#pic' + wheelItem).addClass('active');
                     
                 selectedItem = wheelItem;
                 
@@ -50,9 +50,9 @@
 				<!-- Header -->
 					<header id="header">
                      
-                       <div align="center" class="thumbs">
-                        <a href="http://slickwebstudio.com/ngGallery">
-                            <img id="pic0" src="assets/images/ngGallery.png"></a>
+                       <div class="thumbs">
+                        <!-- <a href="http://slickwebstudio.com/ngGallery">
+                            <img id="pic0" src="assets/images/ngGallery.png"></a> -->
                         <a href="http://slickwebstudio.com/ngGallery">
                             <img id="pic1" src="assets/images/ngGallery.png"></a>
                         <a href="http://slickwebstudio.com/me">
@@ -62,9 +62,7 @@
                         <a href="http://slickwebstudio.com/bike">
                             <img id="pic4" src="assets/images/bike-screen.png"></a>
                         <a href="http://slickwebstudio.com/math">
-                            <img id="pic5" src="assets/images/math-screen.jpg"></a>
-                       
-                                        
+                            <img id="pic5" src="assets/images/math-screen.jpg"></a>           
                         </div>
 					    <div id='piemenu' data-wheelnav
                             data-wheelnav-slicepath='MenuSlice'

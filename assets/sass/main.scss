@@ -33,6 +33,8 @@
 		#bg {
 			background-size: $width auto;
 			width: ($width * 3);
+			transition: background 1.5s linear;
+
 		}
 	}
 
@@ -113,6 +115,7 @@
 
 		/* Set your background with this */
 		background: _misc(bg);
+		background: _misc(bg2);
 
 		background-repeat: repeat-x;
 		height: 100%;
@@ -196,6 +199,7 @@
 			font-weight: 900;
 			letter-spacing: -0.035em;
 			line-height: 1em;
+			margin-top:50px;
 		}
 
 		p {
@@ -380,4 +384,150 @@
 				}
 			}
 
+	}
+
+	/* PIE MENU */
+
+	#piemenu > svg {
+	    width: 100%;
+	    height: 100%;
+	    margin-top:50px;
+	    
+	}
+	@media all and (min-width: 960px) {
+	#piemenu { 
+	    height: 250px;
+	    width: 250px;
+	    margin:auto;
+	    }
+	}
+	@media all and (max-width: 959px) and (min-width: 600px) {
+	    #piemenu { 
+	    height: 240px;
+	    width: 240px;
+	    margin:auto;
+	    }
+	}
+	@media all and (max-width: 599px) and (min-width: 50px) {
+	    #piemenu { 
+	    height: 230px;
+	    width: 230px;
+	    margin:auto;    
+	    }
+	}
+
+	[class|=wheelnav-piemenu-slice-basic] { fill: #222222; stroke: black; }
+	[class|=wheelnav-piemenu-slice-selected] { fill: #333333; stroke: black; }
+	[class|=wheelnav-piemenu-slice-hover] { fill: white; stroke: none; fill-opacity: 0.77; cursor: pointer; }
+
+	[class|=wheelnav-piemenu-title-basic] { fill: #fff; stroke: none; }
+	[class|=wheelnav-piemenu-title-selected] { fill: #fff; stroke: none; }
+	[class|=wheelnav-piemenu-title-hover] { fill: #222; stroke: none; cursor: pointer; }
+
+
+	[class|=wheelnav-piemenu-title] > tspan { font-size: 10pt; }
+
+
+
+
+	[class|=wheelnav-piemenu-line-basic] { stroke: #444; stroke-width: 2; }
+	[class|=wheelnav-piemenu-line-selected] { stroke: #444; stroke-width: 2; }
+	[class|=wheelnav-piemenu-line-hover] { stroke: #222; stroke-width: 2; cursor: pointer; }
+
+	.wheelnav-piemenu-spreader-in,
+	.wheelnav-piemenu-spreader-out { fill: #444; stroke: #222;; stroke-width: 1; cursor: pointer; }
+	.wheelnav-piemenu-spreadertitle-in,
+	.wheelnav-piemenu-spreadertitle-out { fill: white; stroke: #444; cursor: pointer; }
+
+	.wheelnav-piemenu-marker { stroke: white; stroke-width: 1; }
+
+
+
+	/*
+
+	TOGGLE
+
+	*/
+
+
+
+
+
+	.onoffswitch {
+	    position: relative; width: 90px;
+	    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+	    vertical-align:middle;
+	}
+	.onoffswitch-checkbox {
+	    display: none;
+	}
+	.onoffswitch-label {
+	    display: block; overflow: hidden; cursor: pointer;
+	    border: 2px solid #999999; border-radius: 20px;
+	}
+	.onoffswitch-inner {
+	    display: block; width: 200%; margin-left: -100%;
+	    transition: margin 0.3s ease-in 0s;
+	}
+	.onoffswitch-inner:before, .onoffswitch-inner:after {
+	    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+	    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+	    box-sizing: border-box;
+	}
+	.onoffswitch-inner:before {
+	    content: "THIS";
+	    padding-left: 10px;
+	    background-color: #000000; color: #FFFFFF;
+	}
+	.onoffswitch-inner:after {
+	    content: "THAT";
+	    padding-right: 10px;
+	    background-color: #EEEEEE; color: #999999;
+	    text-align: right;
+	}
+	.onoffswitch-switch {
+	    display: block; width: 18px; margin: 6px;
+	    background: #FFFFFF;
+	    position: absolute; top: 0; bottom: 0;
+	    right: 56px;
+	    border: 2px solid #999999; border-radius: 20px;
+	    transition: all 0.3s ease-in 0s; 
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+	    margin-left: 0;
+	}
+	.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+	    right: 0px;
+	}
+	.thumbs {
+		position:relative;
+
+	}
+	.thumbs img {
+		position:absolute;
+		left:50%;
+		top:50%;
+		transform:translate(-50%,-50%);
+		bottom:0;
+	}
+
+	*[id^='pic']{
+		width:140px;
+		
+		text-decoration:none;
+		transition: opacity 1s ease-out;
+		opacity: 0; 
+		height:0;
+		overflow: hidden;
+	}
+	.active{
+	    opacity: 1;
+	    height: auto;
+	}
+	#logo {
+		height:30px;
+		width:30px;
+		position:absolute;
+		top:5px;
+		left:5px;
 	}
