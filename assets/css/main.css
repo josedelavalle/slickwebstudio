@@ -1,11 +1,7 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("font-awesome.min.css");
 
-/*
-	Aerial by Pixelarity
-	pixelarity.com @pixelarity
-	License: pixelarity.com/license
-*/
+
 
 /* Reset */
 
@@ -1056,24 +1052,23 @@
 }
 @media all and (min-width: 960px) {
 #piemenu { 
-    height: 230px;
-    width: 230px;
+    height: 400px;
+    width: 400px;
     margin:auto;
     }
 }
 @media all and (max-width: 959px) and (min-width: 600px) {
     #piemenu { 
-    height: 220px;
-    width: 220px;
+    height: 240px;
+    width: 240px;
     margin:auto;
     }
 }
 @media all and (max-width: 599px) and (min-width: 50px) {
     #piemenu { 
-    height: 220px;
-    width: 220px;
-    margin:auto;
-    
+    height: 230px;
+    width: 230px;
+    margin:auto;    
     }
 }
 
@@ -1172,4 +1167,14 @@ TOGGLE
 	position:absolute;
 	top:5px;
 	left:5px;
+}
+
+
+/* screen thumbs above wheel */
+
+#pic0 {
+	display:block;
+}
+#pic1, #pic2, #pic3, #pic4, #pic5{
+	display:none;
 }
