@@ -1,0 +1,165 @@
+<!DOCTYPE HTML> 
+<html>
+	<head>
+		<title>Slick Web Studio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Jose DeLavalle - Online Portfolio" />
+          <meta property="og:description" content="Online Portfolio Jose DeLavalle - Web Developer" />
+          <meta property="og:url" content="http://slickwebstudio.com/me" />
+          <meta property="og:image" content="http://slickwebstudio.com/me/images/thumbs/slickwebstudio.jpg" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+		
+		
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            var wheelItems = 3;
+            var selectedItem = 0;
+            function wheelClick(wheelItem) {
+                //$('#pic' + selectedItem).fadeOut('slow', function() {
+                //    $('#pic' + wheelItem).fadeIn('slow');
+                //});
+                
+                
+            //        $('#pic' + selectedItem).replaceWith("<h1 id='num1' style='display:none'>" + x + "</div>");
+                              
+                //$('#pic' + selectedItem).toggle("slide", function() {
+                 //   $('#pic' + wheelItem).toggle("slide");  
+                //});
+
+                $('#pic' + selectedItem).hide();
+                $('#pic' + wheelItem).show();
+                    
+                selectedItem = wheelItem;
+                
+            }
+        </script>
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay">
+            </div>
+			<div id="main">
+                <a href="#"><img id="logo" src="assets/images/jdLogo.png"/></a>
+				<!-- Header -->
+					<header id="header">
+                     
+                       <div align="center" class="thumbs">
+                        
+                        <a href="http://slickwebstudio.com/bjones">
+                            <img id="pic0" src="assets/images/bjones-screen.png" style="display:block;"></a>
+                        <a href="http://slickwebstudio.com/bjones">
+                            <img id="pic1" src="assets/images/bjones-screen.png" style="display:none;"></a>
+                        <a href="http://slickwebstudio.com/bike">
+                            <img id="pic2" src="assets/images/bike-screen.png" style="display:none;"></a>
+                        <a href="http://slickwebstudio.com/math">
+                            <img id="pic3" src="assets/images/math-screen.jpg" style="display:none;"></a>
+                        <a href="http://slickwebstudio.com/me">
+                            <img id="pic4" src="assets/images/me-screen.jpg" style="display:none;"></a>                
+                        </div>
+					    <div id='piemenu' data-wheelnav
+                            data-wheelnav-slicepath='MenuSlice'
+                            data-wheelnav-spreader data-wheelnav-spreaderpath='MenuSpreader'
+                            data-wheelnav-marker data-wheelnav-markerpath='CogMarker'
+                            data-wheelnav-navangle='270'
+                            data-wheelnav-cssmode
+                            data-wheelnav-init>
+                            <div data-wheelnav-navitemtext='1' onmouseup="wheelClick(1)"></div>
+                            <div data-wheelnav-navitemtext='2' onmouseup="wheelClick(2)"></div>
+                            <div data-wheelnav-navitemtext='3' onmouseup="wheelClick(3)"></div>
+                            <div data-wheelnav-navitemtext='4' onmouseup="wheelClick(4)"></div>
+
+                        </div>
+                       
+                        <a href="#"><h1>Slick Web Studio</h1></a>
+                        
+				        <p>Web Design &nbsp;&bull;&nbsp; Software Develpment</p>
+				        
+						<nav>
+							<ul>
+								<!--<li><a href="#" class="icon fa-twitter">
+								    <span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook">
+								    <span class="label">Facebook</span></a></li>
+								
+								<li><a href="#" class="icon fa-linkedin">
+								    <span class="label">Linked In</span></a></li>-->
+								<li><a href='mailto:jose.delavalle@yahoo.com?Subject=slick web studios' target="_top" class="icon fa-envelope-o">
+								    <span class="label">Email</span></a></li>
+							</ul>
+                            </nav>
+                      
+					
+               
+                
+                </header>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="onoffswitch" id="bgToggle">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+					</footer>
+
+			</div>
+		</div>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+        
+         <script src ="assets/js/jquery-ui.min.js"> </script>
+		<script>
+			window.onload = function() {
+                document.body.className = '';
+                wheel = new wheelnav('piemenu');
+                wheel.wheelRadius = 100;
+                wheel.maxPercent = 1;
+                wheel.slicePathFunction = slicePath().MenuSliceWithoutLine;
+                wheel.markerPathFunction = markerPath().MenuMarker;
+                wheel.clickModeRotate = true;
+
+                wheel.markerEnable = true;
+                wheel.createWheel(['default', 'pie', 'menu', 'line', 'drop']);
+                
+            }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+            
+            var bgAlt = false;
+            $("#myonoffswitch").click(function() {
+                if (bgAlt) {
+                    //document.getElementById("bg").style.background = '#348cb2 url("assets/css/images/bg.jpg") bottom left';
+                    document.getElementById("bg").style.backgroundImage = "url('assets/css/images/bg.gif')";
+                    
+                } else {
+                    //document.getElementById("bg").style.background = '#348cb2 url("assets/css/images/bg.gif") bottom left';
+                    document.getElementById("bg").style.backgroundImage = "url('assets/css/images/bg.jpg')";
+                    
+                }
+                bgAlt = !bgAlt;
+
+            });
+            
+                
+                
+                
+                
+            
+           
+		</script>
+		
+          
+        
+        <script type="text/javascript" src="assets/js/raphael.min.js"></script>
+        <script type="text/javascript" src="assets/js/raphael.icons.min.js"></script>
+        <script type="text/javascript" src="assets/js/wheelnav.min.js"></script>
+    
+	</body>
+</html>
