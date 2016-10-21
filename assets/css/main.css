@@ -142,8 +142,8 @@ a {
 #bg {
   background-size: 2250px auto;
   width: 6750px;
-  -webkit-transition: background 1.5s linear;
-  transition: background 1.5s linear; }
+  -webkit-transition: background 1.0s;
+  transition: background 1.0s; }
 
 /* Overlay */
 
@@ -371,8 +371,8 @@ a {
   #bg {
     background-size: 1500px auto;
     width: 4500px;
-    -webkit-transition: background 1.5s linear;
-    transition: background 1.5s linear; } }
+    -webkit-transition: background 1.0s;
+    transition: background 1.0s; } }
 
 /* Normal */
 @media screen and (max-width: 1280px) {
@@ -397,8 +397,8 @@ a {
   #bg {
     background-size: 750px auto;
     width: 2250px;
-    -webkit-transition: background 1.5s linear;
-    transition: background 1.5s linear; } }
+    -webkit-transition: background 1.0s;
+    transition: background 1.0s; } }
 
 /* Mobile */
 @media screen and (max-width: 736px) {
@@ -425,8 +425,8 @@ a {
   #bg {
     background-size: 300px auto;
     width: 900px;
-    -webkit-transition: background 1.5s linear;
-    transition: background 1.5s linear; }
+    -webkit-transition: background 1.0s;
+    transition: background 1.0s; }
   /* Header */
   #header h1 {
     font-size: 2.5em; }
@@ -459,8 +459,8 @@ a {
   #bg {
     background-size: 412.5px auto;
     width: 1237.5px;
-    -webkit-transition: background 1.5s linear;
-    transition: background 1.5s linear; }
+    -webkit-transition: background 1.0s;
+    transition: background 1.0s; }
   /* Header */
   #header nav {
     padding: 0 1em; } }
